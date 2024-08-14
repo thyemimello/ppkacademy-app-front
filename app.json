@@ -3,42 +3,48 @@
     "name": "ppkacademy-app",
     "slug": "ppkacademy-app",
     "version": "1.0.0",
-
     "web": {
       "favicon": "./assets/favicon.png"
     },
-
     "experiments": {
       "tsconfigPaths": true
     },
-
     "plugins": [
       [
         "expo-dev-launcher",
         {
           "launchMode": "most-recent"
         }
-      ]
+      ],
+      "@react-native-google-signin/google-signin"
     ],
-
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ppkacademy.ppkacademyapp",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.ppkacademy.ppkacademyapp",
+      "googleServicesFile": "./google-services.json"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c104835d-3dda-4a51-b026-be6bc063d3af"
       }
     }
   }
